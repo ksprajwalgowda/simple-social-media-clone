@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+<div align=center>
+  <h1> Posts are here!!!</h1>
+  <br>
+  <br>
+  <ul>
+    {% for post in object_list %}
+      <h3 >{{ post.title }}</h3>
+      <br>
+      <div class="col-md-12 row">
+        <img src="{{ post.pic.url}}" class="rounded mx-auto d-block" width="50%" height="50%" alt="{{ post.title }}">
+      </div>
+
+      <br>
+    {% endfor %}
+  </ul>
+
+</div>
+
+
+{% endblock %}
